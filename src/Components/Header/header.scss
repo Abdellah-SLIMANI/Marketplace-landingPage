@@ -1,0 +1,43 @@
+@mixin myRowFLex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.headerContainer{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    nav{
+        @include myRowFLex();
+        width: 100%;
+        justify-content: space-evenly;
+        ul{
+            width: 80%;
+            list-style: none;
+            justify-content: flex-start;
+            @include myRowFLex();
+            margin-left: 0;
+            padding-left: 0;
+            li{
+                margin-right: 15%;
+            }
+        }
+        .loginSignup{
+            @include myRowFLex();
+            justify-content: space-evenly;
+            .loginButton{
+                color: var(--primary);
+                font-weight: bolder;
+                background: none;
+                border: none;
+            }
+            .signUpButton{
+                background-color: var(--secondary) !important;
+                border: none;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,24 +1,24 @@
 import React from 'react';
-import "./header.scss"
+import "./Header.scss"
 
-function header() {
+function Header() {
     return (
-        <div>
+        <div className="headerContainer">
             <nav>
                 <ul>
-                    <li className="logo navLink"></li>
-                    <li className="navLink"></li>
-                    <li className="navLink"></li>
-                    <li className="navLink"></li>
-                    <li className="navLink"></li>
+                    <li className="logo navLink">LOGO HERE</li>
+                    <li className="navLink">dropdown</li>
+                    <li className="navLink">link</li>
+                    <li className="navLink">link</li>
+                    <li className="navLink">link</li>
                 </ul>
                 <div className="loginSignup">
-                    <button className="loginButton"></button>
-                    <button className="signUpButton"></button>
+                    <button className="loginButton">Login</button>
+                    <button className="signUpButton">Signup</button>
                 </div>
             </nav>
         </div>
     );
 }
 
-export default header;
+export default Header;

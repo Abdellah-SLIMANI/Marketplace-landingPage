@@ -1,0 +1,35 @@
+.drawingContainer{
+    height: 100vh;
+    position: relative;
+    .imagesContainer{
+        position: relative;
+        img{
+            position: absolute;
+        }
+        img:first-child{
+            transform: rotateZ(45deg);
+        }
+        img:last-child{
+            transform: rotateZ(-20deg);
+            transform: translate(0,8%);
+        }
+        .firstCircle{
+            position: absolute;
+        }
+    }
+    .ticket{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        width: 10%;
+        height: auto;
+        padding: 1rem;
+        box-shadow: 20px 15px 20px rgba(0,0,0,0.2);
+        border-radius: 20px;
+        h1,h4{
+            margin: 0;
+        }
+    }
+}

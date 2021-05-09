@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/static/js/main.9b751b5b.chunk.js",
-    "main.js.map": "/static/js/main.9b751b5b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.022dc414.js",
-    "runtime-main.js.map": "/static/js/runtime-main.022dc414.js.map",
-    "static/js/2.a0c6b5f1.chunk.js": "/static/js/2.a0c6b5f1.chunk.js",
-    "static/js/2.a0c6b5f1.chunk.js.map": "/static/js/2.a0c6b5f1.chunk.js.map",
-    "static/js/3.f0c0278b.chunk.js": "/static/js/3.f0c0278b.chunk.js",
-    "static/js/3.f0c0278b.chunk.js.map": "/static/js/3.f0c0278b.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.a0c6b5f1.chunk.js.LICENSE.txt": "/static/js/2.a0c6b5f1.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+    "main.css": "/Marketplace-landingPage/static/css/main.5c2cd70f.chunk.css",
+    "main.js": "/Marketplace-landingPage/static/js/main.ac4982e6.chunk.js",
+    "main.js.map": "/Marketplace-landingPage/static/js/main.ac4982e6.chunk.js.map",
+    "runtime-main.js": "/Marketplace-landingPage/static/js/runtime-main.fe2dbfee.js",
+    "runtime-main.js.map": "/Marketplace-landingPage/static/js/runtime-main.fe2dbfee.js.map",
+    "static/js/2.7df6e8e2.chunk.js": "/Marketplace-landingPage/static/js/2.7df6e8e2.chunk.js",
+    "static/js/2.7df6e8e2.chunk.js.map": "/Marketplace-landingPage/static/js/2.7df6e8e2.chunk.js.map",
+    "static/js/3.6b205d4d.chunk.js": "/Marketplace-landingPage/static/js/3.6b205d4d.chunk.js",
+    "static/js/3.6b205d4d.chunk.js.map": "/Marketplace-landingPage/static/js/3.6b205d4d.chunk.js.map",
+    "index.html": "/Marketplace-landingPage/index.html",
+    "static/css/main.5c2cd70f.chunk.css.map": "/Marketplace-landingPage/static/css/main.5c2cd70f.chunk.css.map",
+    "static/js/2.7df6e8e2.chunk.js.LICENSE.txt": "/Marketplace-landingPage/static/js/2.7df6e8e2.chunk.js.LICENSE.txt",
+    "static/media/ovalImage.png": "/Marketplace-landingPage/static/media/ovalImage.3915d3cd.png",
+    "static/media/ovalShape.png": "/Marketplace-landingPage/static/media/ovalShape.f777948a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.022dc414.js",
-    "static/js/2.a0c6b5f1.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.9b751b5b.chunk.js"
+    "static/js/runtime-main.fe2dbfee.js",
+    "static/js/2.7df6e8e2.chunk.js",
+    "static/css/main.5c2cd70f.chunk.css",
+    "static/js/main.ac4982e6.chunk.js"
   ]
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import images from '../../assets/images';
 import Drawing from '../Drawing/Drawing';
 import "./Description.scss"
 
@@ -6,7 +7,7 @@ function Description(props) {
     return (
         <div className = "mainContainer">
             <div className = "drawingContainer">
-                <Drawing />
+                <img src={images.drawing.default} alt="" />
             </div>
             <div className="descriptionContainer">
             <div className="h1sDiv">

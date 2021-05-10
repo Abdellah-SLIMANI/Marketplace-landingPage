@@ -1,9 +1,14 @@
 import React from 'react';
+import Drawing from '../Drawing/Drawing';
 import "./Description.scss"
 
 function Description(props) {
     return (
-        <div className="descriptionContainer">
+        <div className = "mainContainer">
+            <div className = "drawingContainer">
+                <Drawing />
+            </div>
+            <div className="descriptionContainer">
             <div className="h1sDiv">
                 <h1 className="horizontalText">Lorem, ipsum dolor.</h1>
                 <h1 className="mainTitle">MarketPlace</h1>
@@ -22,6 +27,7 @@ function Description(props) {
                     <input type="text" placeholder = "Enter Your Email..."/>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

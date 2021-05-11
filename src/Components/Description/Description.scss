@@ -1,3 +1,14 @@
+@mixin costumbtn {
+    padding: 1rem;
+    padding-inline: 3rem;
+    background-color: var(--secondary);
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
 .mainContainer{
     display: flex;
     .drawingContainer{
@@ -38,13 +49,7 @@
                 display: flex;
                 width: 80%;
                 button{
-                    padding: 1rem;
-                    padding-inline: 3rem;
-                    background-color: var(--secondary);
-                    border: none;
-                    font-weight: bold;
-                    color: white;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    @include costumbtn()
                 }
     
                 input{
@@ -55,5 +60,9 @@
                 }   
             }
         }
+    }
+    .dialog{
+        transition: 1s !important;
+        background-color: green !important;
     }
 }

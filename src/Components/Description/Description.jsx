@@ -1,9 +1,64 @@
 import React from 'react';
 import images from '../../assets/images';
-import Drawing from '../Drawing/Drawing';
 import "./Description.scss"
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import TextField from '@material-ui/core/TextField';
+
+const useStyles = makeStyles((theme) => ({
+    appBar: {
+      position: 'relative',
+      backgroundColor: '#38C8D1'
+    },
+    title: {
+      marginLeft: theme.spacing(2),
+      flex: 1,
+      textAlign: "center",
+      letterSpacing: '4.5px'
+    },
+    dialogContent: {
+        // backgroundColor: '#38C8D1',
+        height: 'auto',
+        width: "25%",
+        textAlign: 'center',
+        alignSelf: 'center',
+        marginTop: '2.5%'
+    },
+    textFeild:{
+        marginBottom: "5%",
+        borderColor: '#4382DF'
+    },
+    diagBtn:{
+        backgroundColor: '#38C8D1',
+        padding: '1rem',
+        color: 'white',
+        fontWeight: 'bolder',
+        "&:hover": {
+            backgroundColor: '#38C8D1'
+        }
+    }
+  }));
 
 function Description(props) {
+
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+  
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    }
     return (
         <div className = "mainContainer">
             <div className = "drawingContainer">
@@ -24,11 +79,59 @@ function Description(props) {
                      modi mollitia dignissimos maxime. 
                 </p>
                 <div className="formContainer">
-                    <button>Start Selling Now</button>
+                    <Button onClick={handleClickOpen}>Start Selling Now</Button>
                     <input type="text" placeholder = "Enter Your Email..."/>
                 </div>
             </div>
         </div>
+
+        <Dialog fullScreen open={open} onClose={handleClose} className="dialog">
+        <AppBar className={classes.appBar}>
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              Start creating your store Now!
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <DialogContent className={classes.dialogContent}>
+          <TextField
+            className={classes.textFeild}
+            autoFocus
+            margin="dense"
+            id="email"
+            label="Email Address"
+            type="email"
+            fullWidth
+          />
+          <TextField
+            className={classes.textFeild}
+            autoFocus
+            margin="dense"
+            id="password"
+            label="Password"
+            type="password"
+            fullWidth
+          />
+          <TextField
+            className={classes.textFeild}
+            autoFocus
+            margin="dense"
+            id="store name"
+            label="The name of your store"
+            type="string"
+            fullWidth
+          />
+        <DialogActions>
+        <Button onClick={handleClose} className ={classes.diagBtn} >
+            Create Store!
+          </Button>
+        </DialogActions>
+        </DialogContent>
+
+      </Dialog>
         </div>
     );
 }

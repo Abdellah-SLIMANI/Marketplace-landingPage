@@ -1,6 +1,7 @@
 import React from 'react';
 import images from '../../assets/images';
 import "./Description.scss"
+//Importing Material UI things
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -12,7 +13,26 @@ import CloseIcon from '@material-ui/icons/Close';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import TextField from '@material-ui/core/TextField';
+//Importing Formik and Yup for form validation
+import { FormikTextField } from 'formik-material-fields';
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 
+//Form validation utils
+const storeCreationSchema = Yup.object().shape({
+  email: Yup.string().required('Email is required!'),
+  password: Yup.string().min(6,'Password is too short!').required('Password is required!'),
+  storeName: Yup.string().required('Store name is required!'),
+});
+
+const initialValues = {
+  email : "",
+  password: "",
+  storeName: ""
+}
+
+
+//material UI Dialog styling
 const useStyles = makeStyles((theme) => ({
     appBar: {
       position: 'relative',
@@ -97,27 +117,37 @@ function Description(props) {
           </Toolbar>
         </AppBar>
         <DialogContent className={classes.dialogContent}>
-          <TextField
+          <Formik
+            initialValues = {initialValues}
+            validationSchema = {storeCreationSchema}
+            onSubmit = {values => {
+              console.log(`Vlaues: ${values}`)
+            }}
+          >
+            {({errors, touched}) => (
+          <Form>
+          <FormikTextField
             className={classes.textFeild}
             autoFocus
+            name = "email"
             margin="dense"
             id="email"
             label="Email Address"
             type="email"
             fullWidth
           />
-          <TextField
+          <FormikTextField
             className={classes.textFeild}
-            autoFocus
+            name ="password"
             margin="dense"
             id="password"
             label="Password"
             type="password"
             fullWidth
           />
-          <TextField
+          <FormikTextField
             className={classes.textFeild}
-            autoFocus
+            name ="storeName"
             margin="dense"
             id="store name"
             label="The name of your store"
@@ -129,8 +159,10 @@ function Description(props) {
             Create Store!
           </Button>
         </DialogActions>
+        </Form>
+            )}
+        </Formik>
         </DialogContent>
-
       </Dialog>
         </div>
     );
